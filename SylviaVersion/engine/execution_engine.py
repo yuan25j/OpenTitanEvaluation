@@ -30,6 +30,7 @@ class ExecutionEngine:
     module_depth: int = 0
     search_strategy = DepthFirst()
     debug: bool = False
+    reset_state: bool = False
     done: bool = False
 
     def check_pc_SAT(self, s: Solver, constraint: ExprRef) -> bool:
@@ -713,16 +714,22 @@ class ExecutionEngine:
             # makes assumption top level module is first in line
             # ! no longer path code as in bit string, but indices
 
-            
-            self.check_state(manager, state)
 
             curr_path = total_paths[i]
             modules_seen = 0
+            manager.executing = True
+            
+            #TODO set the reset state
+
             for module_name in curr_path:
                 manager.curr_module = manager.names_list[modules_seen]
                 manager.cycle = 0
+                #TODO: MANUALLY ADD THE RESET STATES HERE:
+                #state.store = 
                 for complete_single_cycle_path in curr_path[module_name]:
-                    print(f"path {i} clock cycle {manager.cycle}")
+                    print(f"** path {i} clock cycle {manager.cycle} **")
+                    if manager.executing:
+                        self.check_state(manager, state)
                     for cfg_path in complete_single_cycle_path:
                         directions = cfgs_by_module[module_name][complete_single_cycle_path.index(cfg_path)].compute_direction(cfg_path)
                         k: int = 0
@@ -741,14 +748,45 @@ class ExecutionEngine:
                                             # only do once, and the last CFG 
                     for node in cfgs_by_module[module_name][cfg_count-1].comb:
                         self.search_strategy.visit_stmt(manager, state, node, modules_dict, None)  
-                    manager.cycle += 1
-                    if self.debug:
+                    if self.debug and complete_single_cycle_path.index(cfg_path) == len(complete_single_cycle_path) - 1:
+                        manager.executing = False
                         self.check_state(manager, state)
+                        print(f"<end of cycle {manager.cycle}>")
+                    manager.cycle += 1
                 modules_seen += 1
             manager.cycle = 0
             self.done = True
-            self.check_state(manager, state)
+            if not self.debug:
+                print("==END OF RUN==")
+                self.check_state(manager, state)
             self.done = False
+
+            if self.debug and manager.assertion_violation:
+                print("Assertion violation")
+                manager.assertion_violation = False
+                print(state.pc)
+                symbols_to_values = {}
+                solver_start = time.process_time()
+                if self.solve_pc(state.pc):
+                    solver_end = time.process_time()
+                    manager.solver_time += solver_end - solver_start
+                    solved_model = state.pc.model()
+                    decls =  solved_model.decls()
+                    for item in decls:
+                        symbols_to_values[item.name()] = solved_model[item]
+
+                    counterexample = {}
+                    # plug in phase
+                    for module in state.store:
+                        for signal in state.store[module]:
+                            for symbol in symbols_to_values:
+                                if state.store[module][signal] == symbol:
+                                    counterexample[signal] = symbols_to_values[symbol]
+
+                    print(counterexample)
+                else: 
+                    print("UNSAT!")
+
 
             manager.curr_level = 0
             for module_name in manager.instances_seen:
@@ -860,22 +898,30 @@ class ExecutionEngine:
 
     def check_state(self, manager, state):
         """Checks the status of the execution and displays the state."""
-        if self.done and manager.debug and not manager.is_child and not manager.init_run_flag and not manager.ignore and not manager.abandon:
-            print(f"Cycle {manager.cycle} final state:")
+        if not self.done and manager.debug and manager.executing:
+            print(f"path {manager.curr_path} cycle {manager.cycle} state:")
             print(state.store)
     
-            print(f"Cycle {manager.cycle} final path condition:")
+            print(f"path {manager.curr_path} cycle {manager.cycle} path condition:")
+            print(state.pc)
+        elif self.done and manager.debug and not manager.is_child and not manager.init_run_flag and not manager.ignore and not manager.abandon:
+            print(f"path {manager.curr_path} cycle {manager.cycle} final state:")
+            print(state.store)
+    
+            print(f"path {manager.curr_path} cycle {manager.cycle} final path condition:")
             print(state.pc)
         elif self.done and not manager.is_child and manager.assertion_violation and not manager.ignore and not manager.abandon:
-            print(f"Cycle {manager.cycle} initial state:")
+            print(f"path {manager.curr_path} cycle {manager.cycle} initial state:")
             print(manager.initial_store)
 
-            print(f"Cycle {manager.cycle} final state:")
+            print(f"path {manager.curr_path} cycle {manager.cycle} final state:")
             print(state.store)
     
-            print(f"Cycle {manager.cycle} final path condition:")
+            print(f"path {manager.curr_path} cycle {manager.cycle} final path condition:")
             print(state.pc)
         elif manager.debug and not manager.is_child and not manager.init_run_flag and not manager.ignore:
-            print("Initial state:")
+            print(f"path {manager.curr_path} cycle {manager.cycle} state:")
             print(state.store)
-                
+
+            print(f"path {manager.curr_path} cycle {manager.cycle} Path condition:")
+            print(state.pc)                
