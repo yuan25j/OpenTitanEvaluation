@@ -1,14 +1,12 @@
 Executing for 1 clock cycles
 path 0 clock cycle 0
 Cycle 0 initial state:
-{'updowncounter': {'clock': 'v24DYk1DDbVNZ7G0', 'reset': 'uYPbJ3bqKksxj3sh', 'inst': 'ZVa0IbrgZLLfD5Zx', 'value': 'krcLtbjJzns6Yaoe'}}
+{'updowncounter': {'clock': 'kaMioX3pp1YF1DCO', 'reset': 'mITh9y6XP6yAaANb', 'inst': 'jUUltnzzenOJE4YU', 'value': 's2ZMw9jOaVBHdAls'}}
 Cycle 0 final state:
-{'updowncounter': {'clock': 'v24DYk1DDbVNZ7G0', 'reset': 'uYPbJ3bqKksxj3sh', 'inst': 'ZVa0IbrgZLLfD5Zx', 'value': 'a5MBShZz4pSGoT9d + 1', 'internalvalue': 'a5MBShZz4pSGoT9d + 1', 'internalvalue2': 'SohylB4kfS2JtQ22 + 1'}}
+{'updowncounter': {'clock': 'kaMioX3pp1YF1DCO', 'reset': 'mITh9y6XP6yAaANb', 'inst': 'jUUltnzzenOJE4YU', 'value': 'd4DP7qCACGuMpaMr + 1', 'internalvalue': 'd4DP7qCACGuMpaMr + 1', 'internalvalue2': 'QyMlufsmMWYI42Al + 1'}}
 Cycle 0 final path condition:
-[uYPbJ3bqKksxj3sh != int_to_bv(1),
- a5MBShZz4pSGoT9d == int_to_bv(1)]
+[mITh9y6XP6yAaANb != int_to_bv(1), 2 == int_to_bv(1)]
 Assertion violation
-[uYPbJ3bqKksxj3sh != int_to_bv(1),
- a5MBShZz4pSGoT9d == int_to_bv(1)]
+[mITh9y6XP6yAaANb != int_to_bv(1), 2 == int_to_bv(1)]
 {'reset': 0}
-Elapsed time 0.020573000000000063
+Elapsed time 0.07045440000000003

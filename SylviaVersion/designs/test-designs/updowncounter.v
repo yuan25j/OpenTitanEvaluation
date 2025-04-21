@@ -38,7 +38,7 @@ module updowncounter(
     assign value = internalvalue;
 
     always @(posedge clock) begin
-   `assert (value != 5)
+   `assert (value == 1)
     end
     
     
