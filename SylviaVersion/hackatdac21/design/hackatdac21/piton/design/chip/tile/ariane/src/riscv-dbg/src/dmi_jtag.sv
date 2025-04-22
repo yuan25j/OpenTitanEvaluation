@@ -22,7 +22,7 @@ module dmi_jtag #(
     input  logic         clk_i,      // DMI Clock
     input  logic         rst_ni,     // Asynchronous reset active low
     input  logic         testmode_i,
-    input logic [`NUM_TILES*2-1:0]      priv_lvl_i,
+    input  logic [25*2-1:0]      priv_lvl_i,
     input  logic          we_flag,
     input  logic [255:0]  jtag_hash_i, ikey_hash_i, okey_hash_i,
     

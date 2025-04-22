@@ -394,7 +394,7 @@ module riscv_peripherals #(
       .AXI_USER_WIDTH ( AxiUserWidth     )
   ) dm_master();
 
-  axi2mem #(
+/*  axi2mem #(
       .AXI_ID_WIDTH   ( AxiIdWidth   ),
       .AXI_ADDR_WIDTH ( AxiAddrWidth ),
       .AXI_DATA_WIDTH ( AxiDataWidth ),
@@ -409,7 +409,7 @@ module riscv_peripherals #(
       .be_o       ( dm_slave_be               ),
       .data_o     ( dm_slave_wdata            ),
       .data_i     ( dm_slave_rdata            )
-  );
+  ); */
 
   noc_axilite_bridge #(
     .SLAVE_RESP_BYTEWIDTH   ( 8             ),
@@ -489,7 +489,7 @@ module riscv_peripherals #(
   logic [AxiAddrWidth-1:0] rom_addr;
   logic [AxiDataWidth-1:0] rom_rdata, rom_rdata_bm, rom_rdata_linux;
 
-  AXI_BUS #(
+/*  AXI_BUS #(
     .AXI_ID_WIDTH   ( AxiIdWidth   ),
     .AXI_ADDR_WIDTH ( AxiAddrWidth ),
     .AXI_DATA_WIDTH ( AxiDataWidth ),
@@ -511,7 +511,7 @@ module riscv_peripherals #(
     .be_o   (            ),
     .data_o (            ),
     .data_i ( rom_rdata  )
-  );
+  ); */
 
   //assign rom_req = rom_req_acct ; //&& acc_ctrl_c[priv_lvl_i][0]; 
   assign rom_req = rom_req_acct && acc_ctrl_c[priv_lvl_i][0]; 
@@ -1716,7 +1716,7 @@ module riscv_peripherals #(
   ariane_axi::req_t    acct_axi_req;
   ariane_axi::resp_t   acct_axi_resp;
 
-  acct_wrapper #(
+/*  acct_wrapper #(
     .AXI_ADDR_WIDTH ( AxiAddrWidth ),
     .AXI_DATA_WIDTH ( AxiDataWidth ),
     .AXI_ID_WIDTH   ( AxiIdWidth   ),
@@ -1732,7 +1732,7 @@ module riscv_peripherals #(
     .axi_req_i     ( acct_axi_req  ),
     .axi_resp_o    ( acct_axi_resp ),
     .rst_6
-  );
+  ); */
 
   noc_axilite_bridge #(
     .SLAVE_RESP_BYTEWIDTH   ( 8             ),
