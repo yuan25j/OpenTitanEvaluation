@@ -1,12 +1,15 @@
 Executing for 1 clock cycles
-path 0 clock cycle 0
-Cycle 0 initial state:
-{'updowncounter': {'clock': 'kaMioX3pp1YF1DCO', 'reset': 'mITh9y6XP6yAaANb', 'inst': 'jUUltnzzenOJE4YU', 'value': 's2ZMw9jOaVBHdAls'}}
-Cycle 0 final state:
-{'updowncounter': {'clock': 'kaMioX3pp1YF1DCO', 'reset': 'mITh9y6XP6yAaANb', 'inst': 'jUUltnzzenOJE4YU', 'value': 'd4DP7qCACGuMpaMr + 1', 'internalvalue': 'd4DP7qCACGuMpaMr + 1', 'internalvalue2': 'QyMlufsmMWYI42Al + 1'}}
-Cycle 0 final path condition:
-[mITh9y6XP6yAaANb != int_to_bv(1), 2 == int_to_bv(1)]
+** path 0 clock cycle 0 **
+==END OF RUN==
+path 0 cycle 0 initial state:
+{'aes_192': {'clk': 'GGgWGb0lJh4iR9bU', 'rst_i': 'zluE6vbnY849FBlj', 'start': 'JP0VE75BynL8r78e', 'state': 'JJ6KC8PBLVjgZUbG', 'key': 'KwxqtFSK463rPFfV', 'out': 'MWKL8mGn20fO3LQv', 'out_valid': '8XcHU2CUalhIUVDV'}}
+path 0 cycle 0 final state:
+{'aes_192': {'rst_i': 1, 'start': 'sm6nsOZZZ4HsotEb', 'state': '7fEJ8cVxmNDAw6MS', 'key': 'yjRRB9IWUzqaLgiE', 'out': 'XRZUPwI4RvE8kmuC', 'out_valid': 'GSna2aad1vxNj8w7 - 1 == 0', 's0': '37ZZsMXvQgOoFXos', 'k0': 'ACIp44jX1KAZnWla', 's1': 'vVA8lS98RZuSyEVm', 's2': 'hgrNL0YF12RhBxnF', 's3': 'Mc1UK1ZJJrZrtaab', 's4': 'OvdQaYNnLL70gpwx', 's5': 'TQQHqabnC0Bs9YoD', 's6': 'H2woBNPu8GDXNVqh', 's7': 'KFQfgHDf9bGDVvcc', 's8': 'HcLPYuQo373BvgeT', 's9': 'oqRkdAjQigIsO4Sv', 's10': 'ITwyYZstzCjMkwoC', 's11': 'fvfXpxPikvxfApxD', 'k1': 'SwGZBlAKdDvudKxL', 'k2': 'LvYIMmOa5TBuAQ8n', 'k3': 'GU4iJL7NBfJJwjfg', 'k4': 'W9CwcHfK8foq61gd', 'k5': '0X9vl7HYENRkMrr3', 'k6': 'lSAN6ffKHX0bDsFi', 'k7': 'TlTO2XycV6oIud6c', 'k8': 'CxZ0Nn5ihuKYrlrX', 'k9': 'pbNZoXWzvbkpHlyu', 'k10': 'tMsIkXkTmgoePIVL', 'k11': 'QQ6tHvtS40TtJNHv', 'k0b': 'CIFNfDhdyGCyfr3j', 'k1b': '5wejWbn69NUbB6Qk', 'k2b': 'UtfNYs9aKc9PLih5', 'k3b': 'mX9pgg197m0qBAFg', 'k4b': 'tBGdqXMLUBiS3JXR', 'k5b': 'FVSdQGx435KV6vUM', 'k6b': 'fl1mNQfxk7VMVz54', 'k7b': 'VVGUMdLsCmzx2w3m', 'k8b': 'LA5hzET4mIs0X0Ae', 'k9b': 'oTX7UsqsdyuaY2mu', 'k10b': 'PJ7Fnz1nQOBWVGJZ', 'k11b': '4T4YSmAL54DxNDvb', 'start_r': 'sm6nsOZZZ4HsotEb', 'start_posedge': 'so965No8iQoFgDx6', 'validCounter': 'GSna2aad1vxNj8w7 - 1', 'clk': 0}}
+path 0 cycle 0 final path condition:
+[so965No8iQoFgDx6 != int_to_bv(1),
+ int_to_bv(1) != int_to_bv(2)]
 Assertion violation
-[mITh9y6XP6yAaANb != int_to_bv(1), 2 == int_to_bv(1)]
-{'reset': 0}
-Elapsed time 0.07045440000000003
+[so965No8iQoFgDx6 != int_to_bv(1),
+ int_to_bv(1) != int_to_bv(2)]
+{'start_posedge': 0}
+Elapsed time 0.02090700000000001
