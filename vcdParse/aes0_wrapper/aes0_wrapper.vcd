@@ -1,0 +1,190 @@
+$date Wed Apr 23 17:11:06 2025
+ $end
+$version JasperGold $end
+$timescale 1 ns $end
+$scope module aes0_wrapper $end
+$scope module axi_lite_interface_i $end
+$var wire 1 ! rst_ni $end
+$var wire 278 " axi_req_i [277:0] $end
+$var wire 82 # axi_resp_o [81:0] $end
+$var wire 64 $ address_o [63:0] $end
+$var wire 1 % en_o $end
+$var wire 1 & we_o $end
+$var wire 64 ' data_i [63:0] $end
+$var wire 64 ( data_o [63:0] $end
+$var wire 1 ) clk_i $end
+$upscope $end
+$scope module aes $end
+$var wire 128 * state [127:0] $end
+$var wire 128 + p_c_text [127:0] $end
+$var wire 192 , key [191:0] $end
+$var wire 1 - start $end
+$var wire 128 . out [127:0] $end
+$var wire 1 / out_valid $end
+$var wire 1 0 clk $end
+$upscope $end
+$var wire 1 1 :jasper_formal_reset $end
+$var wire 1 2 rst_ni $end
+$var wire 8 3 reglk_ctrl_i [7:0] $end
+$var wire 1 4 acct_ctrl_i $end
+$var wire 1 5 debug_mode_i $end
+$var wire 278 6 axi_req_i [277:0] $end
+$var wire 82 7 axi_resp_o [81:0] $end
+$var wire 1 8 rst_1 $end
+$var reg 1 9 start $end
+$var reg 32 : p_c[0] [31:0] $end
+$var reg 32 ; p_c[1] [31:0] $end
+$var reg 32 < p_c[2] [31:0] $end
+$var reg 32 = p_c[3] [31:0] $end
+$var reg 32 > state[0] [31:0] $end
+$var reg 32 ? state[1] [31:0] $end
+$var reg 32 @ state[2] [31:0] $end
+$var reg 32 A state[3] [31:0] $end
+$var reg 32 B key0[0] [31:0] $end
+$var reg 32 C key0[1] [31:0] $end
+$var reg 32 D key0[2] [31:0] $end
+$var reg 32 E key0[3] [31:0] $end
+$var reg 32 F key0[4] [31:0] $end
+$var reg 32 G key0[5] [31:0] $end
+$var reg 32 H key1[0] [31:0] $end
+$var reg 32 I key1[1] [31:0] $end
+$var reg 32 J key1[2] [31:0] $end
+$var reg 32 K key1[3] [31:0] $end
+$var reg 32 L key1[4] [31:0] $end
+$var reg 32 M key1[5] [31:0] $end
+$var reg 32 N key2[0] [31:0] $end
+$var reg 32 O key2[1] [31:0] $end
+$var reg 32 P key2[2] [31:0] $end
+$var reg 32 Q key2[3] [31:0] $end
+$var reg 32 R key2[4] [31:0] $end
+$var reg 32 S key2[5] [31:0] $end
+$var reg 2 T key_sel [1:0] $end
+$var wire 128 U p_c_big [127:0] $end
+$var wire 128 V state_big [127:0] $end
+$var wire 192 W key_big [191:0] $end
+$var wire 192 X key_big0 [191:0] $end
+$var wire 192 Y key_big1 [191:0] $end
+$var wire 192 Z key_big2 [191:0] $end
+$var wire 128 [ ct [127:0] $end
+$var wire 1 \ ct_valid $end
+$var wire 64 ] address [63:0] $end
+$var wire 1 ^ en $end
+$var wire 1 _ en_acct $end
+$var wire 1 ` we $end
+$var wire 64 a wdata [63:0] $end
+$var wire 64 b rdata [63:0] $end
+$var wire 32 c :X_0 [31:0] $end
+$var wire 1 d :jasper_formal_clock $end
+$var wire 1 e clk_i $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx "
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx #
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx $
+x%
+x&
+b00000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx '
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (
+1)
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx *
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx +
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ,
+x-
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx .
+x/
+10
+11
+02
+bxxxxxxxx 3
+x4
+x5
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 6
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 7
+x8
+x9
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx :
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ;
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx <
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx =
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx >
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ?
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx @
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx A
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx B
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx C
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx D
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx E
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx F
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx G
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx H
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx I
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx J
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx K
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx L
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx M
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx N
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx O
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx P
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Q
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx R
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx S
+bxx T
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx U
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx V
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx W
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx X
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Y
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Z
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx [
+x\
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ]
+x^
+x_
+x`
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx a
+b00000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx b
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx c
+1d
+1e
+#5
+0)
+00
+0d
+0e
+#10
+1)
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 *
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +
+0-
+10
+09
+b00000000000000000000000000000000 :
+b00000000000000000000000000000000 ;
+b00000000000000000000000000000000 <
+b00000000000000000000000000000000 =
+b00000000000000000000000000000000 >
+b00000000000000000000000000000000 ?
+b00000000000000000000000000000000 @
+b00000000000000000000000000000000 A
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 U
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 V
+1d
+1e
+#15
+0)
+00
+0d
+0e
+#20
+1)
+10
+1d
+1e
+#25
+0)
+00
+0d
+0e
+#30
