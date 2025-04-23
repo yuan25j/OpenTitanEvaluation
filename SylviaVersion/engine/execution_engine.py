@@ -773,6 +773,7 @@ class ExecutionEngine:
                                            'validCounter':init_symbol(),
                                            'clk':0
                                            }}
+            
                                            
                 for complete_single_cycle_path in curr_path[module_name]:
                     print(f"** path {i} clock cycle {manager.cycle} **")

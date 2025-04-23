@@ -1,0 +1,248 @@
+$date Wed Apr 23 15:14:08 2025
+ $end
+$version JasperGold $end
+$timescale 1 ns $end
+$scope module dmi_jtag $end
+$scope module i_dmi_jtag_tap $end
+$var wire 1 ! tms_i $end
+$var wire 1 " trst_ni $end
+$var wire 1 # td_i $end
+$var wire 1 $ td_o $end
+$var wire 1 % tdo_oe_o $end
+$var wire 1 & testmode_i $end
+$var wire 1 ' test_logic_reset_o $end
+$var wire 1 ( shift_dr_o $end
+$var wire 1 ) update_dr_o $end
+$var wire 1 * capture_dr_o $end
+$var wire 1 + dmi_access_o $end
+$var wire 1 , dtmcs_select_o $end
+$var wire 1 - dmi_reset_o $end
+$var wire 2 . dmi_error_i [1:0] $end
+$var wire 1 / dmi_tdi_o $end
+$var wire 1 0 dmi_tdo_i $end
+$var wire 1 1 tck_i $end
+$upscope $end
+$scope module i_dmi_cdc $end
+$var wire 1 2 trst_ni $end
+$var wire 41 3 jtag_dmi_req_i [40:0] $end
+$var wire 1 4 jtag_dmi_ready_o $end
+$var wire 1 5 jtag_dmi_valid_i $end
+$var wire 34 6 jtag_dmi_resp_o [33:0] $end
+$var wire 1 7 jtag_dmi_valid_o $end
+$var wire 1 8 jtag_dmi_ready_i $end
+$var wire 1 9 clk_i $end
+$var wire 1 : rst_ni $end
+$var wire 41 ; core_dmi_req_o [40:0] $end
+$var wire 1 < core_dmi_valid_o $end
+$var wire 1 = core_dmi_ready_i $end
+$var wire 34 > core_dmi_resp_i [33:0] $end
+$var wire 1 ? core_dmi_ready_o $end
+$var wire 1 @ core_dmi_valid_i $end
+$var wire 1 A tck_i $end
+$upscope $end
+$scope module hmac $end
+$var wire 1 B clk_i $end
+$var wire 1 C rst_ni $end
+$var wire 1 D init_i $end
+$var wire 256 E key_i [255:0] $end
+$var wire 256 F ikey_hash_i [255:0] $end
+$var wire 256 G okey_hash_i [255:0] $end
+$var wire 1 H key_hash_bypass_i $end
+$var wire 512 I message_i [511:0] $end
+$var wire 256 J hash_o [255:0] $end
+$var wire 1 K ready_o $end
+$var wire 1 L hash_valid_o $end
+$upscope $end
+$var wire 1 M :jasper_formal_reset $end
+$var wire 1 N _sv2v_0 $end
+$var wire 1 O clk_i $end
+$var wire 1 P rst_ni $end
+$var wire 1 Q testmode_i $end
+$var wire 50 R priv_lvl_i [49:0] $end
+$var wire 1 S we_flag $end
+$var wire 256 T jtag_hash_i [255:0] $end
+$var wire 256 U ikey_hash_i [255:0] $end
+$var wire 256 V okey_hash_i [255:0] $end
+$var wire 1 W jtag_unlock_o $end
+$var wire 1 X dmi_rst_no $end
+$var wire 41 Y dmi_req_o [40:0] $end
+$var wire 1 Z dmi_req_valid_o $end
+$var wire 1 [ dmi_req_ready_i $end
+$var wire 34 \ dmi_resp_i [33:0] $end
+$var wire 1 ] dmi_resp_ready_o $end
+$var wire 1 ^ dmi_resp_valid_i $end
+$var wire 1 _ tms_i $end
+$var wire 1 ` trst_ni $end
+$var wire 1 a td_i $end
+$var wire 1 b td_o $end
+$var wire 1 c tdo_oe_o $end
+$var wire 1 d test_logic_reset $end
+$var wire 1 e shift_dr $end
+$var wire 1 f update_dr $end
+$var wire 1 g capture_dr $end
+$var wire 1 h dmi_access $end
+$var wire 1 i dtmcs_select $end
+$var wire 1 j dmi_reset $end
+$var wire 1 k dmi_tdi $end
+$var wire 1 l dmi_tdo $end
+$var wire 41 m dmi_req [40:0] $end
+$var wire 1 n dmi_req_ready $end
+$var wire 1 o dmi_req_valid $end
+$var wire 34 p dmi_resp [33:0] $end
+$var wire 1 q dmi_resp_valid $end
+$var wire 1 r dmi_resp_ready $end
+$var wire 4 s state_d [3:0] $end
+$var reg 4 t state_q [3:0] $end
+$var wire 41 u dr_d [40:0] $end
+$var reg 41 v dr_q [40:0] $end
+$var wire 7 w address_d [6:0] $end
+$var reg 7 x address_q [6:0] $end
+$var wire 32 y data_d [31:0] $end
+$var reg 32 z data_q [31:0] $end
+$var wire 1 { pass_check $end
+$var wire 1 | pass_mode $end
+$var wire 1 } startHash $end
+$var wire 256 ~ exp_hash [255:0] $end
+$var wire 256 !! pass_hash [255:0] $end
+$var wire 512 "! pass_data [511:0] $end
+$var wire 1 #! hmac_ready $end
+$var wire 1 $! hashValid $end
+$var wire 41 %! dmi [40:0] $end
+$var wire 1 &! error_dmi_busy $end
+$var wire 2 '! error_d [1:0] $end
+$var reg 2 (! error_q [1:0] $end
+$var wire 2 )! :func_sv2v_cast_2_0:inp [1:0] $end
+$var wire 2 *! :func_sv2v_cast_2_0:sv2v_cast_2 [1:0] $end
+$var wire 2 +! :func_sv2v_cast_2_2:inp [1:0] $end
+$var wire 2 ,! :func_sv2v_cast_2_2:sv2v_cast_2 [1:0] $end
+$var wire 1 -! :X_0 $end
+$var wire 1 .! :jasper_formal_clock $end
+$var wire 1 /! tck_i $end
+$upscope $end
+$enddefinitions $end
+#0
+x!
+0"
+x#
+x$
+x%
+x&
+x'
+x(
+x)
+x*
+x+
+x,
+x-
+b00 .
+x/
+00
+11
+02
+b00000000100000000000000000000000000000000 3
+x4
+05
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 6
+x7
+18
+x9
+x:
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ;
+x<
+x=
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx >
+x?
+x@
+1A
+xB
+xC
+xD
+b0010010011100110111110100010001001010100110000101111111101100011001010100100000110110011101101000010111001011100100110110101010011110010010001111011100110100100010001011010000111001110010010001000110011111010001000111011001110000100011000110010000101010100 E
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx F
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx G
+1H
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx I
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx J
+xK
+xL
+1M
+xN
+xO
+xP
+xQ
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx R
+xS
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx T
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx U
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx V
+0W
+xX
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Y
+xZ
+x[
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
+x]
+x^
+x_
+0`
+xa
+xb
+xc
+xd
+xe
+xf
+xg
+xh
+xi
+xj
+xk
+0l
+b00000000100000000000000000000000000000000 m
+xn
+0o
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx p
+xq
+1r
+b0000 s
+b0000 t
+bx0000000000000000000000000000000000000000 u
+b00000000000000000000000000000000000000000 v
+b0000000 w
+b0000000 x
+b00000000000000000000000000000000 y
+b00000000000000000000000000000000 z
+0{
+0|
+x}
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ~
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx !!
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx "!
+x#!
+x$!
+b00000000000000000000000000000000000000000 %!
+0&!
+b00 '!
+b00 (!
+b00 )!
+b00 *!
+b00 +!
+b00 ,!
+x-!
+1.!
+1/!
+#5
+01
+0A
+0.!
+0/!
+#10
+11
+1A
+1.!
+1/!
+#15
+01
+0A
+0.!
+0/!
+#20
