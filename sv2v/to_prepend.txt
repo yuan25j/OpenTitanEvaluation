@@ -1,0 +1,7 @@
+packages/reg_intf_pkg.sv
+packages/dm_pkg.sv
+packages/riscv_pkg.sv
+packages/axi_pkg.sv
+packages/ariane_pkg.sv
+packages/ariane_soc_pkg.sv
+packages/ariane_axi_pkg.sv
