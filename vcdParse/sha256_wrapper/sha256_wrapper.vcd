@@ -1,0 +1,182 @@
+$date Wed Apr 23 18:40:14 2025
+ $end
+$version JasperGold $end
+$timescale 1 ns $end
+$scope module sha256_wrapper $end
+$scope module axi_lite_interface_i $end
+$var wire 1 ! rst_ni $end
+$var wire 278 " axi_req_i [277:0] $end
+$var wire 82 # axi_resp_o [81:0] $end
+$var wire 64 $ address_o [63:0] $end
+$var wire 1 % en_o $end
+$var wire 1 & we_o $end
+$var wire 64 ' data_i [63:0] $end
+$var wire 64 ( data_o [63:0] $end
+$var wire 1 ) clk_i $end
+$upscope $end
+$scope module sha256 $end
+$var wire 1 * rst $end
+$var wire 1 + init $end
+$var wire 1 , next $end
+$var wire 512 - block [511:0] $end
+$var wire 256 . h_block [255:0] $end
+$var wire 1 / h_block_update $end
+$var wire 256 0 digest [255:0] $end
+$var wire 1 1 digest_valid $end
+$var wire 1 2 ready $end
+$var wire 1 3 clk $end
+$upscope $end
+$var wire 1 4 :jasper_formal_reset $end
+$var wire 1 5 rst_ni $end
+$var wire 8 6 reglk_ctrl_i [7:0] $end
+$var wire 1 7 acct_ctrl_i $end
+$var wire 278 8 axi_req_i [277:0] $end
+$var wire 82 9 axi_resp_o [81:0] $end
+$var wire 1 : rst_3 $end
+$var reg 1 ; newMessage_r $end
+$var reg 1 < startHash_r $end
+$var reg 1 = startHash $end
+$var reg 1 > newMessage $end
+$var reg 32 ? data[0] [31:0] $end
+$var reg 32 @ data[1] [31:0] $end
+$var reg 32 A data[2] [31:0] $end
+$var reg 32 B data[3] [31:0] $end
+$var reg 32 C data[4] [31:0] $end
+$var reg 32 D data[5] [31:0] $end
+$var reg 32 E data[6] [31:0] $end
+$var reg 32 F data[7] [31:0] $end
+$var reg 32 G data[8] [31:0] $end
+$var reg 32 H data[9] [31:0] $end
+$var reg 32 I data[10] [31:0] $end
+$var reg 32 J data[11] [31:0] $end
+$var reg 32 K data[12] [31:0] $end
+$var reg 32 L data[13] [31:0] $end
+$var reg 32 M data[14] [31:0] $end
+$var reg 32 N data[15] [31:0] $end
+$var wire 512 O bigData [511:0] $end
+$var wire 256 P hash [255:0] $end
+$var wire 1 Q ready $end
+$var wire 1 R hashValid $end
+$var wire 256 S h_block [255:0] $end
+$var wire 1 T h_block_update $end
+$var wire 64 U address [63:0] $end
+$var wire 1 V en $end
+$var wire 1 W en_acct $end
+$var wire 1 X we $end
+$var wire 64 Y wdata [63:0] $end
+$var wire 64 Z rdata [63:0] $end
+$var wire 1 [ :jasper_formal_clock $end
+$var wire 1 \ clk_i $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx "
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx #
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx $
+x%
+x&
+b00000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx '
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (
+1)
+0*
+x+
+x,
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -
+b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 .
+0/
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
+x1
+x2
+13
+14
+05
+bxxxxxxxx 6
+x7
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 8
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 9
+x:
+x;
+x<
+x=
+x>
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ?
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx @
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx A
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx B
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx C
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx D
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx E
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx F
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx G
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx H
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx I
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx J
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx K
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx L
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx M
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx N
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx O
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx P
+xQ
+xR
+b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 S
+0T
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx U
+xV
+xW
+xX
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Y
+b00000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Z
+1[
+1\
+#5
+0)
+03
+0[
+0\
+#10
+1)
+0+
+0,
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -
+13
+0;
+0<
+0=
+0>
+b00000000000000000000000000000000 ?
+b00000000000000000000000000000000 @
+b00000000000000000000000000000000 A
+b00000000000000000000000000000000 B
+b00000000000000000000000000000000 C
+b00000000000000000000000000000000 D
+b00000000000000000000000000000000 E
+b00000000000000000000000000000000 F
+b00000000000000000000000000000000 G
+b00000000000000000000000000000000 H
+b00000000000000000000000000000000 I
+b00000000000000000000000000000000 J
+b00000000000000000000000000000000 K
+b00000000000000000000000000000000 L
+b00000000000000000000000000000000 M
+b00000000000000000000000000000000 N
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 O
+1[
+1\
+#15
+0)
+03
+0[
+0\
+#20
+1)
+13
+1[
+1\
+#25
+0)
+03
+0[
+0\
+#30
