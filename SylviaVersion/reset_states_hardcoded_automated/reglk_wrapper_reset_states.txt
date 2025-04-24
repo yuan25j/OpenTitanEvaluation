@@ -1,0 +1,22 @@
+state.store = {
+    'reglk_wrapper': {
+        'rst_ni': 0,
+        'jtag_unlock': init_symbol(),
+        'reglk_ctrl_i': init_symbol(),
+        'acct_ctrl_i': init_symbol(),
+        'axi_req_i': init_symbol(),
+        'axi_resp_o': init_symbol(),
+        'reglk_ctrl_o': 0,
+        'rst_9': init_symbol(),
+        'reglk_ctrl': init_symbol(),
+        'reglk_mem': 0,
+        'address': init_symbol(),
+        'en': init_symbol(),
+        'en_acct': init_symbol(),
+        'we': init_symbol(),
+        'wdata': init_symbol(),
+        'rdata': 0,
+        'j': init_symbol(),
+        'clk_i': 0,
+    }
+}

@@ -1,0 +1,27 @@
+state.store = {
+    'rsa_wrapper': {
+        'rst_ni': 0,
+        'rst_13': init_symbol(),
+        'reglk_ctrl_i': init_symbol(),
+        'acct_ctrl_i': init_symbol(),
+        'debug_mode_i': init_symbol(),
+        'axi_req_i': init_symbol(),
+        'axi_resp_o': init_symbol(),
+        'inter_rst_ni': 0,
+        'inter_rst1_ni': 0,
+        'encry_decry_i': 0,
+        'prime_i': 0,
+        'prime1_i': 0,
+        'exe_finish_o': init_symbol(),
+        'exe_finish': init_symbol(),
+        'msg_in': 0,
+        'msg_out': init_symbol(),
+        'address': init_symbol(),
+        'en': init_symbol(),
+        'en_acct': init_symbol(),
+        'we': init_symbol(),
+        'wdata': init_symbol(),
+        'rdata': init_symbol(),
+        'clk_i': 0,
+    }
+}

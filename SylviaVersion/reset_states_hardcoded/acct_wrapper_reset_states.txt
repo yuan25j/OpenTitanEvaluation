@@ -15,6 +15,6 @@ state.store = {'acct_wrapper': {'rst_ni':0,
                                            'wdata':init_symbol(),
                                            'rdata':init_symbol(),
                                            'j':init_symbol(),
-                                           'clk_i':0,
+                                           'clk_i':0
                                            }}
             
