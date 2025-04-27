@@ -1,0 +1,2 @@
+Executing for 5 clock cycles
+Elapsed time 0.014600000000000057

@@ -1,0 +1,9 @@
+Executing for 5 clock cycles
+** path 0 clock cycle 0 **
+** path 0 clock cycle 1 **
+** path 0 clock cycle 2 **
+** path 0 clock cycle 3 **
+** path 0 clock cycle 4 **
+==END OF RUN==
+{}
+Elapsed time 0.17972399999999988

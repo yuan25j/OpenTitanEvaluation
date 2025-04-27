@@ -33,9 +33,12 @@ wire   [191:0] k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11;
 wire   [127:0] k0b, k1b, k2b, k3b, k4b, k5b, k6b, k7b, k8b, k9b, k10b, k11b;
 
 reg start_r;
+reg [4:0] prev_validCounter;
 always @(posedge clk)
     begin
+        prev_validCounter <= validCounter;
         start_r <= start;
+        `assert(out_valid || (validCounter == (prev_validCounter - 1)))
     end
 
 wire start_posedge = start & ~start_r;
@@ -68,7 +71,6 @@ assign out_valid = (validCounter == 0);
 // expand_key_type_A_192  a8 (clk, k8, 8'h20,  k9,  k8b);
 // expand_key_type_C_192  a9 (clk, k9, 8'h40, k10,  k9b);
 // expand_key_type_B_192 a10 (clk,k10,        k11, k10b);
-
 // one_round
 //     r1 (clk, s0, k0b, s1),
 //     r2 (clk, s1, k1b, s2),
@@ -81,12 +83,7 @@ assign out_valid = (validCounter == 0);
 //     r9 (clk, s8, k8b, s9),
 //     r10 (clk, s9, k9b, s10),
 //     r11 (clk, s10, k10b, s11);
-
 // final_round
 //     rf (clk, s11, k11b, out);
-
-always @(posedge clk) begin
-    `assert (1==2)
-end
 
 endmodule

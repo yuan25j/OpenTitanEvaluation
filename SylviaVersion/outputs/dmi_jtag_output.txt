@@ -1,0 +1,16 @@
+Executing for 10 clock cycles
+** path 0 clock cycle 0 **
+** path 0 clock cycle 1 **
+** path 0 clock cycle 2 **
+** path 0 clock cycle 3 **
+** path 0 clock cycle 4 **
+** path 0 clock cycle 5 **
+** path 0 clock cycle 6 **
+** path 0 clock cycle 7 **
+** path 0 clock cycle 8 **
+** path 0 clock cycle 9 **
+==END OF RUN==
+Assertion violation
+[iRZ48OslZLMq1fAw != int_to_bv(1)]
+{'_sv2v_0': 0}
+Elapsed time 0.03649599999999997

@@ -1,3 +1,8 @@
+`define assert(expression) \
+        if (!(expression)) begin \
+            $display("ASSERTION FAILED"); \
+            $finish; \
+        end
 module acct_wrapper (
 	clk_i,
 	rst_ni,
@@ -38,21 +43,21 @@ module acct_wrapper (
 	reg [63:0] rdata;
 	assign acc_ctrl_o = {acct_mem[64+:32], acct_mem[32+:32], acct_mem[0+:32] | {8 {we_flag}}};
 	assign reglk_ctrl = reglk_ctrl_i;
-	axi_lite_interface #(
-		.AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
-		.AXI_DATA_WIDTH(AXI_DATA_WIDTH),
-		.AXI_ID_WIDTH(AXI_ID_WIDTH)
-	) axi_lite_interface_i(
-		.clk_i(clk_i),
-		.rst_ni(rst_ni),
-		.axi_req_i(axi_req_i),
-		.axi_resp_o(axi_resp_o),
-		.address_o(address),
-		.en_o(en_acct),
-		.we_o(we),
-		.data_i(rdata),
-		.data_o(wdata)
-	);
+	// axi_lite_interface #(
+	// 	.AXI_ADDR_WIDTH(AXI_ADDR_WIDTH),
+	// 	.AXI_DATA_WIDTH(AXI_DATA_WIDTH),
+	// 	.AXI_ID_WIDTH(AXI_ID_WIDTH)
+	// ) axi_lite_interface_i(
+	// 	.clk_i(clk_i),
+	// 	.rst_ni(rst_ni),
+	// 	.axi_req_i(axi_req_i),
+	// 	.axi_resp_o(axi_resp_o),
+	// 	.address_o(address),
+	// 	.en_o(en_acct),
+	// 	.we_o(we),
+	// 	.data_i(rdata),
+	// 	.data_o(wdata)
+	// );
 	assign en = en_acct && acct_ctrl_i;
 	integer j;
 	always @(posedge clk_i)
@@ -90,5 +95,6 @@ module acct_wrapper (
 				9: rdata = (reglk_ctrl[6] ? 'b0 : acct_mem[288+:32]);
 				default: rdata = 32'b00000000000000000000000000000000;
 			endcase
+	`assert(2==1)
 	end
 endmodule

@@ -95,6 +95,39 @@ module dmi_jtag (
 	assign jtag_unlock_o = pass_check;
 	assign exp_hash = jtag_hash_i;
 	always @(*) begin
+		//Translation: assert -name HACK@DAC21_p1 {(~dmi_jtag_i.trst_ni |-> dmi_jtag_i.pass_check == 1'b0)}
+		// `assert(1==1)
+		// if(!trst_ni) begin
+		// 	`assert(pass_check=1'b0)
+		// end
+
+		// `assert(trst_ni || pass_check==1'b0)
+		
+		//Translate: assert -name HACK@DAC21_p2 {(dmi_jtag_i.state_q == dmi_jtag_i.Idle && dmi_jtag_i.state_d == dmi_jtag_i.Write |-> dmi_jtag_i.pass_check == 1'b1)}
+		// if(state_q == 4'd0 && state_d == 4'd3) begin
+		// 	`assert(pass_check == 1'b1)
+		// end
+		// `assert(!(state_q == 4'd0 && state_d == 4'd3)||(pass_check == 1'b1))
+
+		//****
+
+		//Translate: assert -name HACK@DAC21_p30 {((dmi_jtag_i.pass_mode) |-> (dmi_jtag_i.pass_data == dmi_jtag_i.data_d))}
+		// if(pass_mode) begin
+		// 	`assert(pass_data==data_d)
+		// end
+
+		`assert(!(pass_mode) || (pass_data==data_d))
+
+		// ***
+
+		//Translate: assert -name HACK@DAC21_p84 {((dmi_jtag_i.dmi_req_ready && dmi_jtag_i.state_q == dmi_jtag_i.Write) |=> (dmi_jtag_i.state_q == dmi_jtag_i.WaitWriteValid))}
+		
+		// if(dmi_req_ready && state_q == 4'd3) begin
+		// 	`assert(state_q==4'd4)
+		// end
+
+		// `assert( (!(dmi_req_ready==1'b1 && state_q == 4'd3)) || (state_q==4'd4) )
+
 		if (_sv2v_0)
 			;
 		error_dmi_busy = 1'b0;
@@ -266,7 +299,4 @@ module dmi_jtag (
 	// 	.hash_valid_o(hashValid)
 	// );
 	initial _sv2v_0 = 0;
-always @(*) begin
-	`assert(2==1)
-end
 endmodule
