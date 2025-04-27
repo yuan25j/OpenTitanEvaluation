@@ -216,7 +216,7 @@ class ExecutionEngine:
                             m.always_writes[m.curr_always].append(sub_item.name)
                 elif isinstance(items.left.var, Partselect):
                     if m.curr_always is not None and items.left.var.var.name not in m.always_writes[m.curr_always]:
-                        m.always_writes[m.curr_always].append(item.left.var.var.name)
+                        m.always_writes[m.curr_always].append(items.left.var.var.name)
                 elif isinstance(items.left.var, Pointer):
                     if m.curr_always is not None and items.left.var.var.name not in m.always_writes[m.curr_always]:
                         m.always_writes[m.curr_always].append(items.left.var.var.name)
@@ -696,6 +696,7 @@ class ExecutionEngine:
         # for each combinatoin of multicycle paths
 
         for i in range(len(total_paths)):
+            manager.curr_path = i
             manager.prev_store = state.store
             manager.init_state(state, manager.prev_store, ast)
             # initalize inputs with symbols for all submodules too
@@ -721,66 +722,12 @@ class ExecutionEngine:
             
             #TODO set the reset state
 
+            #print(self.reset_state)
+
             for module_name in curr_path:
                 manager.curr_module = manager.names_list[modules_seen]
                 manager.cycle = 0
-                #TODO: MANUALLY ADD THE RESET STATES HERE:
-                state.store = {
-    'aes0_wrapper': {
-        'rst_ni': 0,
-        'reglk_ctrl_i': init_symbol(),
-        'acct_ctrl_i': init_symbol(),
-        'debug_mode_i': init_symbol(),
-        'axi_req_i': init_symbol(),
-        'axi_resp_o': init_symbol(),
-        'rst_1': init_symbol(),
-        'start': 0,
-        'p_c[0]': 0,
-        'p_c[1]': 0,
-        'p_c[2]': 0,
-        'p_c[3]': 0,
-        'state[0]': 0,
-        'state[1]': 0,
-        'state[2]': 0,
-        'state[3]': 0,
-        'key0[0]': init_symbol(),
-        'key0[1]': init_symbol(),
-        'key0[2]': init_symbol(),
-        'key0[3]': init_symbol(),
-        'key0[4]': init_symbol(),
-        'key0[5]': init_symbol(),
-        'key1[0]': init_symbol(),
-        'key1[1]': init_symbol(),
-        'key1[2]': init_symbol(),
-        'key1[3]': init_symbol(),
-        'key1[4]': init_symbol(),
-        'key1[5]': init_symbol(),
-        'key2[0]': init_symbol(),
-        'key2[1]': init_symbol(),
-        'key2[2]': init_symbol(),
-        'key2[3]': init_symbol(),
-        'key2[4]': init_symbol(),
-        'key2[5]': init_symbol(),
-        'key_sel': init_symbol(),
-        'p_c_big': 0,
-        'state_big': 0,
-        'key_big': init_symbol(),
-        'key_big0': init_symbol(),
-        'key_big1': init_symbol(),
-        'key_big2': init_symbol(),
-        'ct': init_symbol(),
-        'ct_valid': init_symbol(),
-        'address': init_symbol(),
-        'en': init_symbol(),
-        'en_acct': init_symbol(),
-        'we': init_symbol(),
-        'wdata': init_symbol(),
-        'rdata': init_symbol(),
-        'clk_i': 0,
-    }
-}
-
-                                           
+    
                 for complete_single_cycle_path in curr_path[module_name]:
                     print(f"** path {i} clock cycle {manager.cycle} **")
                     if manager.executing:
@@ -819,6 +766,9 @@ class ExecutionEngine:
             if self.debug and manager.assertion_violation:
                 print("Assertion violation")
                 manager.assertion_violation = False
+                new_assertions = list(set(state.pc.assertions()))
+                state.pc = Solver()
+                state.pc.add(new_assertions)
                 print(state.pc)
                 symbols_to_values = {}
                 solver_start = time.process_time()

@@ -389,11 +389,15 @@ class DepthFirst(Search):
             if isinstance(stmt.right.var, IntConst):
                 if isinstance(stmt.left.var, Pointer):
                     s.store[m.curr_module][stmt.left.var.var.name] = stmt.right.var.value
+                elif isinstance(stmt.left.var, Partselect):
+                    s.store[m.curr_module][f"{stmt.left.var.var.name}[{stmt.left.var.msb}:{stmt.left.var.lsb}]"] = stmt.right.var.value
                 else:
                     s.store[m.curr_module][stmt.left.var.name] = stmt.right.var.value
             elif isinstance(stmt.right.var, Identifier):
                 if isinstance(stmt.left.var, Pointer):
                     s.store[m.curr_module][f"{stmt.left.var.var}[{stmt.left.var.ptr}]"] = s.store[m.curr_module][stmt.right.var.name]
+                elif isinstance(stmt.left.var, Partselect):
+                    s.store[m.curr_module][f"{stmt.left.var.var.name}[{stmt.left.var.msb}:{stmt.left.var.lsb}]"] = s.store[m.curr_module][stmt.right.var.name]
                 else:
                     s.store[m.curr_module][stmt.left.var.name] = s.store[m.curr_module][stmt.right.var.name]
             elif isinstance(stmt.right.var, Concat):
@@ -755,16 +759,16 @@ class DepthFirst(Search):
                 s.pc.add(x==y)
                 if not solve_pc(s.pc):
                     s.pc.pop()
-                    m.abandon = True
-                    m.ignore  = True
+                    # m.abandon = True
+                    # m.ignore  = True
                     return
             else: 
                 s.pc.push()
                 s.pc.add(x != y)
                 if not solve_pc(s.pc):
                     s.pc.pop()
-                    m.abandon = True
-                    m.ignore = True
+                    # m.abandon = True
+                    # m.ignore = True
                     return
                
         elif isinstance(expr, Identifier):
@@ -795,8 +799,8 @@ class DepthFirst(Search):
                 if not solve_pc(s.pc):
                     s.pc.pop()
                     #print("Abandoning infeasible path")
-                    m.abandon = True
-                    m.ignore = True
+                    # m.abandon = True
+                    # m.ignore = True
                     return
             else: 
                 s.pc.push()
@@ -804,8 +808,8 @@ class DepthFirst(Search):
                 if not solve_pc(s.pc):
                     s.pc.pop()
                     #print("Abandoning infeasible path")
-                    m.abandon = True
-                    m.ignore = True
+                    # m.abandon = True
+                    # m.ignore = True
                     time.process_time()
                     return
 
@@ -858,8 +862,8 @@ class DepthFirst(Search):
                 if not solve_pc(s.pc):
                     s.pc.pop()
                     #print("Abandoning infeasible path")
-                    m.abandon = True
-                    m.ignore = True
+                    # m.abandon = True
+                    # m.ignore = True
                     return
             else: 
                 s.pc.push()
@@ -867,8 +871,8 @@ class DepthFirst(Search):
                 if not solve_pc(s.pc):
                     s.pc.pop()
                     #print("Abandoning infeasible path")
-                    m.abandon = True
-                    m.ignore = True
+                    # m.abandon = True
+                    # m.ignore = True
                     return
         elif isinstance(expr, Ulnot):
             res = parse_expr_to_Z3(expr, s, m)
@@ -884,8 +888,8 @@ class DepthFirst(Search):
                 if not solve_pc(s.pc):
                     s.pc.pop()
                     #print("Abandoning infeasible path")
-                    m.abandon = True
-                    m.ignore = True
+                    # m.abandon = True
+                    # m.ignore = True
                     return
             else: 
                 s.pc.push()
@@ -893,8 +897,8 @@ class DepthFirst(Search):
                 if not solve_pc(s.pc):
                     s.pc.pop()
                     #print("Abandoning infeasible path")
-                    m.abandon = True
-                    m.ignore = True
+                    # m.abandon = True
+                    # m.ignore = True
                     time.process_time()
                     return
         elif isinstance(expr, Decl):
