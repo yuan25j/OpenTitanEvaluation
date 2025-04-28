@@ -3,6 +3,39 @@
             $display("ASSERTION FAILED"); \
             $finish; \
         end
+package riscv;
+    typedef enum logic[1:0] {
+      PRIV_LVL_M = 2'b11,
+      PRIV_LVL_S = 2'b01,
+      PRIV_LVL_U = 2'b00
+    } priv_lvl_t;
+
+    typedef struct packed {
+        logic           x;
+        logic           w;
+        logic           r;
+    } pmpcfg_access_t;
+
+    // packed struct of a PMP configuration register (8bit)
+    typedef struct packed {
+        logic           locked;     // lock this configuration
+        logic [1:0]     reserved;
+        pmp_addr_mode_t addr_mode;  // Off, TOR, NA4, NAPOT
+        pmpcfg_access_t access_type;
+    } pmpcfg_t;
+
+    typedef struct {
+        byte priv;
+        longint unsigned pc;
+        byte is_fp;
+        byte rd;
+        longint unsigned data;
+        int unsigned instr;
+        byte was_exception;
+    } commit_log_t;
+
+endpackage
+
 module csr_regfile (
 	clk_i,
 	rst_ni,
@@ -253,25 +286,7 @@ module csr_regfile (
 	reg [63:0] mask;
 	always @(*) begin
 		//Translate this SVA: assert -name HACK@DAC21_p7 {(~(ariane_i.csr_regfile_i.debug_mode_q) || (riscv::PRIV_LVL_M))}
-		//riscv::PRIV_LVL_M = 2'b11
-		`assert(!(debug_mode_q || 2'b11))
-		// `assert(!(debug_mode_q || riscv::PRIV_LVL_M))
-
-        //Translate this SVA: assert -name HACK@DAC21_p18 {(ariane_i.csr_regfile_i.csr_we && ariane_i.csr_regfile_i.csr_addr.address == riscv::CSR_SIE) -> ariane_i.csr_regfile_i.mie_d == (ariane_i.csr_regfile_i.mie_q & ~ariane_i.csr_regfile_i.mideleg_q) | (ariane_i.csr_regfile_i.csr_wdata & ariane_i.csr_regfile_i.mideleg_q)}
-        //Direct translation:
-		//riscv::CSR_SIE = 12'h104
-        // if(csr_we && csr_addr.address == riscv::CSR_SIE) begin
-        //     `assert((mie_d == mie_q && !mideleg_q) || (csr_wdata && mideleg_q))
-        // end
-        // if(csr_we && csr_addr.address == 12'h104) begin
-        //     `assert((mie_d == mie_q && !mideleg_q) || (csr_wdata && mideleg_q))
-        // end
-        //compressed translation:
-        // `assert(!(csr_we && csr_addr.address == 12'h104) || ((mie_d == mie_q && !mideleg_q) || (csr_wdata && mideleg_q)))
-
-
-
-        // `assert(!(csr_we && csr_addr.address == riscv::CSR_SIE) || ((mie_d == mie_q && !mideleg_q) || (csr_wdata && mideleg_q)))
+		`assert(!(debug_mode_q || riscv::PRIV_LVL_M))
 		// `assert(1==2)
 		if (_sv2v_0)
 			;

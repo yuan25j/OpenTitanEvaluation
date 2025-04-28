@@ -60,7 +60,8 @@ module reglk_wrapper (
 	assign en = en_acct && acct_ctrl_i;
 	integer j;
 	always@(*) begin
-		`assert(1==2)
+		// `assert(1==2)
+		`assert(!(!(rst_ni && !jtag_unlock && !rst_9)) || (reglk_mem == 0))
 	end
 	always @(posedge clk_i)
 		if (~((rst_ni && ~jtag_unlock) && ~rst_9))
@@ -91,7 +92,28 @@ module reglk_wrapper (
 				default: rdata = 32'b00000000000000000000000000000000;
 			endcase
 	end
-	// always @(*) begin
-	// 	`assert(1==2)
-	// end
+	always @(*) begin
+
+		//FIRST PROPERTY BELOW:
+		//Translate this SVA from verificationbenchmarks repo: assert -name HACK@DAC21_p35 {~(reglk_wrapper_i.rst_ni && ~reglk_wrapper_i.jtag_unlock && ~reglk_wrapper_i.rst_9) |-> (reglk_wrapper_i.reglk_mem == 'h0)}
+		// if(!(rst_ni && !jtag_unlock && !rst_9)) begin
+		// 	`assert(reglk_mem == 0)
+		// end
+		//compressed version of the assertion is below:
+		`assert(!(!(rst_ni && !jtag_unlock && !rst_9)) || (reglk_mem == 0))
+
+		//***************************************************************************
+		//***************************************************************************
+		//***************************************************************************
+
+		//SECOND PROPERTY BELOW:
+		//Translate this SVA from verificationbenchmarks repo: assert -name HACK@DAC21_p48 {(~(reglk_wrapper_i.rst_ni && ~rst_9) |-> ~reglk_wrapper_i.jtag_unlock)}
+		// if (!(rst_ni && !rst_9)) begin
+		// 	`assert(!jtag_unlock)
+		// end
+		//compressed version of the assertion is below:
+		// `assert( !(!(rst_ni && !rst_9)) || (!jtag_unlock))
+
+	end
+		// `assert(3==2)
 endmodule

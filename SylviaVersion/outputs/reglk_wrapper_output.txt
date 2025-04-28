@@ -1,2 +1,17 @@
 Executing for 5 clock cycles
-Elapsed time 0.015353000000000061
+** path 0 clock cycle 0 **
+** path 0 clock cycle 1 **
+** path 0 clock cycle 2 **
+** path 0 clock cycle 3 **
+** path 0 clock cycle 4 **
+==END OF RUN==
+path 0 cycle 0 initial state:
+{'reglk_wrapper': {'rst_ni': 0, 'jtag_unlock': 'upCvk9xPZx3lm65g', 'reglk_ctrl_i': 'uSikzlYCPhg0Pmdr', 'acct_ctrl_i': 'yxShVHaqdkdZXM5r', 'axi_req_i': 'UQWODcFFugGysUFP', 'axi_resp_o': '1Z9C9omqOoSbjPYf', 'reglk_ctrl_o': 0, 'rst_9': 'Y5RMQRDkRsbRw9DE', 'reglk_ctrl': 'e5RqAessSP4rbuwH', 'reglk_mem': 0, 'address': 'MYv8mHJgAHwmfXPp', 'en': 'hEJrCN2sU9nu1ut2', 'en_acct': 'MWQHsm9WjU0RQZG9', 'we': 'RI3bvXHv02uyImBR', 'wdata': 'CVq2V6wq0LJ2xbws', 'rdata': 0, 'j': 'Rg7zRwoF7QpEa6qt', 'clk_i': 0}}
+path 0 cycle 0 final state:
+{'reglk_wrapper': {'rst_ni': '3NjZY2Bv0JyWkaK4', 'jtag_unlock': 'NZnpBFjaFwAVQ76m', 'reglk_ctrl_i': 'YYHgnUSLGqTgE7ef', 'acct_ctrl_i': 'u6YcIysve82C5nNU', 'axi_req_i': 'DYtcG4Iop5FUJLua', 'axi_resp_o': 'S4F0pivO8Uo44Mog', 'reglk_ctrl_o': {None: None}, 'rst_9': 'XwJ8slWmbeCQc14l', 'reglk_ctrl': 'YYHgnUSLGqTgE7ef', 'reglk_mem': 'fxC6ikuHgk1V359r', 'address': 'Pu9JSUIJ6hsZTC15', 'en': 'hqsla41hGQTbf8gG && u6YcIysve82C5nNU', 'en_acct': 'hqsla41hGQTbf8gG', 'we': 'mArZ2H6Yh1ygaqYT', 'wdata': 'Ls3N5a95sWcm6mBu', 'rdata': 'lvM4LtWADrx2GC3I', 'j': 'Rg7zRwoF7QpEa6qt', 'clk_i': 'tG116BwVoOATJdKl', 'AXI_ADDR_WIDTH': 64, 'AXI_DATA_WIDTH': 64, 'AXI_ID_WIDTH': 10, 'NB_SLAVE': 1, 'NB_PERIPHERALS': 14, 'ariane_axi_AddrWidth': 64, 'ariane_soc_IdWidth': 4, 'ariane_axi_DataWidth': 64, 'ariane_axi_StrbWidth': 8}}
+path 0 cycle 0 final path condition:
+[]
+Assertion violation
+[]
+{}
+Elapsed time 0.02260299999999993

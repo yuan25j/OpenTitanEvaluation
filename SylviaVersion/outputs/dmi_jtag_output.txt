@@ -1,16 +1,25 @@
-Executing for 10 clock cycles
+Executing for 5 clock cycles
 ** path 0 clock cycle 0 **
 ** path 0 clock cycle 1 **
 ** path 0 clock cycle 2 **
 ** path 0 clock cycle 3 **
 ** path 0 clock cycle 4 **
-** path 0 clock cycle 5 **
-** path 0 clock cycle 6 **
-** path 0 clock cycle 7 **
-** path 0 clock cycle 8 **
-** path 0 clock cycle 9 **
 ==END OF RUN==
+path 0 cycle 0 initial state:
+{'dmi_jtag': {'_sv2v_0': 'jC9EDAKSV4O7vlZW', 'clk_i': 'EYqeHDCDKhFAenJw', 'rst_ni': 'GAP7IQ6cAX4foFqW', 'testmode_i': 'on5a0JeIP0zFnWTa', 'priv_lvl_i': 'voJp9LkHnVQrjRQW', 'we_flag': 'iZatcsTbCEYrMxtb', 'jtag_hash_i': '12qsW0MaqG2XHfqW', 'ikey_hash_i': 'tgOXRO1kqyIsiItl', 'okey_hash_i': 'ft6N6vJQVvUD5WNA', 'jtag_unlock_o': 0, 'dmi_rst_no': '7Vx275wyAWxSnWyT', 'dmi_req_o': 'GTWr56MveT7BqRHV', 'dmi_req_valid_o': 'ZUfhbu5xokthtqnx', 'dmi_req_ready_i': 'CeSY1DIByYdleI1v', 'dmi_resp_i': 'lDlSdmwfCDJti9z3', 'dmi_resp_ready_o': '2TR2h3Xq0F5Oy0es', 'dmi_resp_valid_i': 'NsAvA7zhMjjNI3nR', 'tms_i': 0, 'trst_ni': 0, 'td_i': 'BdoQ2IddIcDBWKNU', 'td_o': 'cdc22b18LZD51YOK', 'test_logic_reset': '6VTAeTtSo0dnNY4m', 'update_dr': 'h9wk5cO4bP2SgSGt', 'capture_dr': 'xcHVHU22xZGMYanR', 'dmi_access': 'zwtOLj0eGAi8RS1O', 'dtmcs_select': 'bi46HApnRLq9mI1Y', 'dmi_reset': '5iNcAT2ZijUXpEMi', 'dmi_tdi': 'kG2SF5B8dEoak43A', 'dmi_tdo': 0, 'dmi_req': 4294967296, 'dmi_req_ready': 'gfnQGg83AiP5I6qY', 'dmi_req_valid': 0, 'dmi_resp': 'gmkHrI9YpMqfiLc2', 'dmi_resp_valid': '0hwhAxXRDrJVftdq', 'dmi_resp_ready': 1, 'state_d': 0, 'state_q': 0, 'dr_d': 'CpEokZeFUMA9qk81', 'dr_q': 0, 'address_d': 0, 'address_q': 0, 'data_d': 0, 'data_q': 0, 'pass_check': 0, 'pass_mode': 0, 'startHash': 'ZMsccgRJSyeIXcAF', 'exp_hash': 'o8LKfM1InOTOnbrO', 'pass_hash': 'OAgAWa9k04dtGiqw', 'pass_data': 'gVSpcSqIUpn7odG5', 'hmac_ready': 'dpHDBQuOZTZ748UX', 'dmi': 0, 'error_dmi_busy': 0, 'error_d': 0, 'error_q': 0, 'tck_i': 0, 'tdo_oe_o': 'RM3A1dQtkmlTYDsH'}}
+path 0 cycle 0 final state:
+{'dmi_jtag': {'_sv2v_0': '0', 'clk_i': '7pweOYUS7p6ITQDa', 'rst_ni': 'DpDnZv2w38Rsy3Zi', 'testmode_i': 'lk9z3VVsaWJDO8L1', 'priv_lvl_i': 'rm6BDkt7Ius4sIkD', 'we_flag': 'lfOJMCMewCTx8dq3', 'jtag_hash_i': 'QAcyycZMf3LQy5ll', 'ikey_hash_i': 'QV6t90Rcpbdpi6fO', 'okey_hash_i': 'IEbB759Bdspj9tck', 'jtag_unlock_o': 'w4eyuowZd2cvpleE', 'dmi_rst_no': 'DpDnZv2w38Rsy3Zi', 'dmi_req_o': '4KsF5k7uuILDDGdy', 'dmi_req_valid_o': 'qx7HVspzUmeJKeBv', 'dmi_req_ready_i': 'Ic8giIQmnn9b6bzw', 'dmi_resp_i': 'ENCPIyelodoRPtTf', 'dmi_resp_ready_o': 'RMSkaL1Zsq1fTFUH', 'dmi_resp_valid_i': 'ugYUo0LiUKMfA4JF', 'tms_i': 'NcExkwc5HBY4IyX1', 'trst_ni': 'gvyjlHOQXl2KOfRz', 'td_i': 'S5WXZe8DZTVzo6hw', 'td_o': 'PKSPZ1JAewTYyXic', 'test_logic_reset': 'I0YJgLxscOgAlIXG', 'update_dr': 'VvgIiXvgVEoJYNkQ', 'capture_dr': 'rneKl41slWMokwng', 'dmi_access': 'HWCbEBbkxLiSREWz', 'dtmcs_select': 'ppUG2cs34fLsAprI', 'dmi_reset': 'UgKV6jrZmQRKdlOu', 'dmi_tdi': 'punAfGQEb11uM6kf', 'dmi_tdo': 'ucGeJHNsKIM772QY[0]', 'dmi_req': 'LZhNgQDs0V4SuhiK', 'dmi_req_ready': '3J0JSImHZO4RXyRW', 'dmi_req_valid': 'ABQAnMpgbzdyOEHy', 'dmi_resp': 'GCQvz1eOV9pJeP4w', 'dmi_resp_valid': 'B65KjN8CIDhd8xhI', 'dmi_resp_ready': "1'b1", 'state_d': 'IVFLBQxuD7y4DMdI', 'state_q': 'jqLQea2TUFGOAG3F', 'dr_d': 'amEC3NJ36AbvOCjM', 'dr_q': 'ucGeJHNsKIM772QY', 'address_d': 'mzxAnU7INTa1snKE', 'address_q': 'g1dDmSDZlpysDYj7', 'data_d': 'VitnBklOvNGrZtU9', 'data_q': 'Q94fXLPOBwE3dd0W', 'pass_check': 'w4eyuowZd2cvpleE', 'pass_mode': 'u2XAXQ3sDeyAfH9k', 'startHash': 'osApOHUziZKBkjcX', 'exp_hash': 'QAcyycZMf3LQy5ll', 'pass_hash': 'inlhe0N2Oia9mrpY', 'pass_data': 'xZXSHbHbYA5jD1hs', 'hmac_ready': 'E3tP7gBJDRNF9cVX', 'dmi': 'ucGeJHNsKIM772QY', 'error_dmi_busy': 'FXbW1OvB8RjZLF1u', 'error_d': 'lXR8gWDEzqS0Ndk5', 'error_q': 'gs4aGWxb8rFT1JO0', 'tck_i': '4Cdi0Sfxm8FqXH0i', 'tdo_oe_o': 'k0VPqmNj3DJyhYRh', 'IdcodeValue': 32'h00000001, 'shift_dr': 'yuAMqsnWocs1a0Om', 'hashValid': 'uL6Wfs63p3FH5V6R', 'dmi_req[40:(Minus 40 7)]': 'g1dDmSDZlpysDYj7', 'dmi_req[31:(Minus 31 32)]': 'Q94fXLPOBwE3dd0W', 'dmi_req[33:(Minus 33 2)]': 'If(jqLQea2TUFGOAG3F == 3), 2, 1)'}}
+path 0 cycle 0 final path condition:
+[iWOimcgJLs0jQFW0 != int_to_bv(1),
+ 0 != int_to_bv(1),
+ 0 != int_to_bv(1),
+ 0 != int_to_bv(1),
+ 0 != int_to_bv(1)]
 Assertion violation
-[iRZ48OslZLMq1fAw != int_to_bv(1)]
+[iWOimcgJLs0jQFW0 != int_to_bv(1),
+ 0 != int_to_bv(1),
+ 0 != int_to_bv(1),
+ 0 != int_to_bv(1),
+ 0 != int_to_bv(1)]
 {'_sv2v_0': 0}
-Elapsed time 0.03649599999999997
+Elapsed time 0.04496900000000004

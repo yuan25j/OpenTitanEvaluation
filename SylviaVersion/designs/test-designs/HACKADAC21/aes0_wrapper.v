@@ -72,7 +72,27 @@ module aes0_wrapper (
 	// );
 	assign en = en_acct && acct_ctrl_i;
 	always @(*) begin
-		`assert(2==1)
+		//Translate this SVA: assert -name HACK@DAC21_p39 {(aes0_wrapper_i.ct_valid |-> ((aes0_wrapper_i.p_c[0] == 0) && (aes0_wrapper_i.p_c[1] == 0) && (aes0_wrapper_i.p_c[2] == 0) && (aes0_wrapper_i.p_c[3] == 0)))}
+		//Direct translation:
+		// if (ct_valid) begin
+		// 	`assert((p_c[0] == 0) && (p_c[1] == 0) && (p_c[2] == 0) && (p_c[3] == 0))
+		// end
+		//Compressed translation:
+		`assert(!(ct_valid) || ((p_c[0] == 0) && (p_c[1] == 0) && (p_c[2] == 0) && (p_c[3] == 0)))
+		//gave somewhat symbolic output?
+		// `assert(1==2)
+		
+
+		//Translate this SVA: assert -name HACK@DAC21_p46 {((aes0_wrapper_i.debug_mode_i) |-> ((aes0_wrapper_i.key_big == 192'b0) && (aes0_wrapper_i.key_big2 == 192'b0)))}
+		//Direct translation:
+		// if (debug_mode_i) begin
+		// 	`assert(key_big==192'b0 && key_big2==192'b0)
+		// end
+		//compressed translation:
+		// `assert(!(debug_mode_i) || (key_big==192'b0 && key_big2==192'b0))
+		//^^^ NOT DETECTED!!!
+
+		
 	end
 	always @(posedge clk_i)
 		if (~(rst_ni && ~rst_1)) begin
@@ -151,8 +171,8 @@ module aes0_wrapper (
 	// 	.out_valid(ct_valid)
 	// );
 
-	always @(*) begin
-		`assert(1==2)
-	end
+	// always @(*) begin
+	// 	`assert(1==2)
+	// end
 	
 endmodule
