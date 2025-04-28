@@ -254,7 +254,7 @@ module csr_regfile (
 	always @(*) begin
 		//Translate this SVA: assert -name HACK@DAC21_p7 {(~(ariane_i.csr_regfile_i.debug_mode_q) || (riscv::PRIV_LVL_M))}
 		//riscv::PRIV_LVL_M = 2'b11
-		`assert(!(debug_mode_q || 2'b11))
+		// `assert(!(debug_mode_q || 2'b11))
 		// `assert(!(debug_mode_q || riscv::PRIV_LVL_M))
 
         //Translate this SVA: assert -name HACK@DAC21_p18 {(ariane_i.csr_regfile_i.csr_we && ariane_i.csr_regfile_i.csr_addr.address == riscv::CSR_SIE) -> ariane_i.csr_regfile_i.mie_d == (ariane_i.csr_regfile_i.mie_q & ~ariane_i.csr_regfile_i.mideleg_q) | (ariane_i.csr_regfile_i.csr_wdata & ariane_i.csr_regfile_i.mideleg_q)}
@@ -267,7 +267,7 @@ module csr_regfile (
         //     `assert((mie_d == mie_q && !mideleg_q) || (csr_wdata && mideleg_q))
         // end
         //compressed translation:
-        // `assert(!(csr_we && csr_addr.address == 12'h104) || ((mie_d == mie_q && !mideleg_q) || (csr_wdata && mideleg_q)))
+        `assert(!(csr_we && csr_addr.address == 12'h104) || ((mie_d == mie_q && !mideleg_q) || (csr_wdata && mideleg_q)))
 
 
 

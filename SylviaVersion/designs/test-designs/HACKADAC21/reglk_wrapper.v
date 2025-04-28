@@ -100,7 +100,7 @@ module reglk_wrapper (
 		// 	`assert(reglk_mem == 0)
 		// end
 		//compressed version of the assertion is below:
-		`assert(!(!(rst_ni && !jtag_unlock && !rst_9)) || (reglk_mem == 0))
+		// `assert(!(!(rst_ni && !jtag_unlock && !rst_9)) || (reglk_mem == 0))
 
 		//***************************************************************************
 		//***************************************************************************
@@ -112,7 +112,7 @@ module reglk_wrapper (
 		// 	`assert(!jtag_unlock)
 		// end
 		//compressed version of the assertion is below:
-		// `assert( !(!(rst_ni && !rst_9)) || (!jtag_unlock))
+		`assert( !(!(rst_ni && !rst_9)) || (!jtag_unlock))
 
 	end
 		// `assert(3==2)

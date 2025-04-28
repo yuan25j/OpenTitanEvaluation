@@ -116,7 +116,7 @@ module dmi_jtag (
 		// 	`assert(pass_data==data_d)
 		// end
 
-		`assert(!(pass_mode) || (pass_data==data_d))
+		// `assert(!(pass_mode) || (pass_data==data_d))
 
 		// ***
 
@@ -126,7 +126,7 @@ module dmi_jtag (
 		// 	`assert(state_q==4'd4)
 		// end
 
-		// `assert( (!(dmi_req_ready==1'b1 && state_q == 4'd3)) || (state_q==4'd4) )
+		`assert( (!(dmi_req_ready==1'b1 && state_q == 4'd3)) || (state_q==4'd4) )
 
 		if (_sv2v_0)
 			;

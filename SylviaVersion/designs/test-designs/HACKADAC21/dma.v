@@ -80,6 +80,8 @@ module dma (
 	assign valid_o = valid_reg;
 	always @(*) begin
 		`assert(1==2)
+		//Translate this SVA: assert -name HACK@DAC21_p57 {(dma_i.dma_ctrl_reg == dma_i.CTRL_ABORT && !dma_i.done_i |=> dma_i.dma_ctrl_reg != dma_i.CTRL_ABORT)}
+		
 	end
 	always @(posedge clk_i or negedge rst_ni) begin : save_inputs
 		// `assert(1==2)

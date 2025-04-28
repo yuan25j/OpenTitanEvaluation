@@ -60,6 +60,11 @@ module acct_wrapper (
 	// );
 	assign en = en_acct && acct_ctrl_i;
 	integer j;
+	always @(*) begin
+		// `assert(2==1)
+		//Translate this SVA: assert -name HACK@DAC21_p42 {((acct_wrapper_i.rst_ni && rst_6) || (acct_wrapper_i.acct_mem.read_data_0[0]==32'h0000_0000))}
+		`assert((rst_ni && rst_6)||(acct_mem.read_data_0[0]==32'h0000_0000))
+	end
 	always @(posedge clk_i)
 		if (~(rst_ni && ~rst_6))
 			for (j = 0; j < AcCt_MEM_SIZE; j = j + 1)
@@ -95,6 +100,5 @@ module acct_wrapper (
 				9: rdata = (reglk_ctrl[6] ? 'b0 : acct_mem[288+:32]);
 				default: rdata = 32'b00000000000000000000000000000000;
 			endcase
-	`assert(2==1)
 	end
 endmodule

@@ -78,9 +78,7 @@ module aes0_wrapper (
 		// 	`assert((p_c[0] == 0) && (p_c[1] == 0) && (p_c[2] == 0) && (p_c[3] == 0))
 		// end
 		//Compressed translation:
-		`assert(!(ct_valid) || ((p_c[0] == 0) && (p_c[1] == 0) && (p_c[2] == 0) && (p_c[3] == 0)))
-		//gave somewhat symbolic output?
-		// `assert(1==2)
+		// `assert(!(ct_valid) || ((p_c[0] == 0) && (p_c[1] == 0) && (p_c[2] == 0) && (p_c[3] == 0)))
 		
 
 		//Translate this SVA: assert -name HACK@DAC21_p46 {((aes0_wrapper_i.debug_mode_i) |-> ((aes0_wrapper_i.key_big == 192'b0) && (aes0_wrapper_i.key_big2 == 192'b0)))}

@@ -5,5 +5,13 @@ Executing for 5 clock cycles
 ** path 0 clock cycle 3 **
 ** path 0 clock cycle 4 **
 ==END OF RUN==
+path 0 cycle 0 initial state:
+{'rsa_wrapper': {'clk_i': 'sQbvrh9StuJCAIKF', 'rst_ni': 'IqwsxgYhiq6YGKNL', 'reglk_ctrl_i': 'H9rAgfxfUYsidw7j', 'acct_ctrl_i': 'qdslShUCAifwCoH4', 'debug_mode_i': 'KNd2vfjlaeNjqr2N', 'axi_req_i': 'DEBeDyq73hFan3mc', 'axi_resp_o': 'zAQ5RjiMp0ui2qHd', 'rst_13': 'p8trPzVZjfBJVkGV'}}
+path 0 cycle 0 final state:
+{'rsa_wrapper': {'rst_ni': 0, 'rst_13': 'ljw803cmFKITQvsb', 'reglk_ctrl_i': 'Kqio3OJ5sK0LxjuF', 'acct_ctrl_i': '2cDr0HtCLWl7bNGt', 'debug_mode_i': 'H5rS0daxcA9oGpZW', 'axi_req_i': '79NWV4uYavY4JCMb', 'axi_resp_o': 'TuWyz5ckrjq3Npr6', 'inter_rst_ni': 0, 'inter_rst1_ni': 0, 'encry_decry_i': 0, 'prime_i': 0, 'prime1_i': 0, 'exe_finish_o': 'If(ljw803cmFKITQvsb, 1, HrignHogtdX3kq68 )', 'exe_finish': 'HrignHogtdX3kq68', 'msg_in': 0, 'msg_out': 'kMqQoTi6CgSzHFu0', 'address': 'DINMan5BMglNa2tR', 'en': 'kSjxK1uuonpLiSeV && 2cDr0HtCLWl7bNGt', 'en_acct': 'kSjxK1uuonpLiSeV', 'we': 'F4P7aI6ilYFyKfJc', 'wdata': 'AhOrU3BlrlflZoZD', 'rdata': 'lgQ8EGh6y1sZBwQk', 'clk_i': 0}}
+path 0 cycle 0 final path condition:
+[]
+Assertion violation
+[]
 {}
-Elapsed time 0.17972399999999988
+Elapsed time 0.17828599999999994

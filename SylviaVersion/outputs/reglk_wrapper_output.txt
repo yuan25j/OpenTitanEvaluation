@@ -6,12 +6,12 @@ Executing for 5 clock cycles
 ** path 0 clock cycle 4 **
 ==END OF RUN==
 path 0 cycle 0 initial state:
-{'reglk_wrapper': {'rst_ni': 0, 'jtag_unlock': 'upCvk9xPZx3lm65g', 'reglk_ctrl_i': 'uSikzlYCPhg0Pmdr', 'acct_ctrl_i': 'yxShVHaqdkdZXM5r', 'axi_req_i': 'UQWODcFFugGysUFP', 'axi_resp_o': '1Z9C9omqOoSbjPYf', 'reglk_ctrl_o': 0, 'rst_9': 'Y5RMQRDkRsbRw9DE', 'reglk_ctrl': 'e5RqAessSP4rbuwH', 'reglk_mem': 0, 'address': 'MYv8mHJgAHwmfXPp', 'en': 'hEJrCN2sU9nu1ut2', 'en_acct': 'MWQHsm9WjU0RQZG9', 'we': 'RI3bvXHv02uyImBR', 'wdata': 'CVq2V6wq0LJ2xbws', 'rdata': 0, 'j': 'Rg7zRwoF7QpEa6qt', 'clk_i': 0}}
+{'reglk_wrapper': {'clk_i': 'rfkSaxbqj508Edvo', 'rst_ni': '5qX6D9q3XmcyblcX', 'jtag_unlock': 'E2rCCoRQl3zpLA3G', 'reglk_ctrl_i': 'bhW76NoYZcjmzIsn', 'acct_ctrl_i': 'b0nbU5QxGeN9RwtN', 'reglk_ctrl_o': 'VmfgAYnB7kUYwz44', 'axi_req_i': 'MfglQAZtCcuxOlwe', 'axi_resp_o': 'KUBLkUiWUSfTCD5E', 'rst_9': 'YczHfyHB2HKRKD9W'}}
 path 0 cycle 0 final state:
-{'reglk_wrapper': {'rst_ni': '3NjZY2Bv0JyWkaK4', 'jtag_unlock': 'NZnpBFjaFwAVQ76m', 'reglk_ctrl_i': 'YYHgnUSLGqTgE7ef', 'acct_ctrl_i': 'u6YcIysve82C5nNU', 'axi_req_i': 'DYtcG4Iop5FUJLua', 'axi_resp_o': 'S4F0pivO8Uo44Mog', 'reglk_ctrl_o': {None: None}, 'rst_9': 'XwJ8slWmbeCQc14l', 'reglk_ctrl': 'YYHgnUSLGqTgE7ef', 'reglk_mem': 'fxC6ikuHgk1V359r', 'address': 'Pu9JSUIJ6hsZTC15', 'en': 'hqsla41hGQTbf8gG && u6YcIysve82C5nNU', 'en_acct': 'hqsla41hGQTbf8gG', 'we': 'mArZ2H6Yh1ygaqYT', 'wdata': 'Ls3N5a95sWcm6mBu', 'rdata': 'lvM4LtWADrx2GC3I', 'j': 'Rg7zRwoF7QpEa6qt', 'clk_i': 'tG116BwVoOATJdKl', 'AXI_ADDR_WIDTH': 64, 'AXI_DATA_WIDTH': 64, 'AXI_ID_WIDTH': 10, 'NB_SLAVE': 1, 'NB_PERIPHERALS': 14, 'ariane_axi_AddrWidth': 64, 'ariane_soc_IdWidth': 4, 'ariane_axi_DataWidth': 64, 'ariane_axi_StrbWidth': 8}}
+{'reglk_wrapper': {'rst_ni': 0, 'jtag_unlock': 'P3zMbpnOqH2MyixC', 'reglk_ctrl_i': 'pgXC5hnUe8aUUq5i', 'acct_ctrl_i': 'FHPUHkGltRujxy0P', 'axi_req_i': 'fMAMuFkGTMZ7p6zq', 'axi_resp_o': '9DbwCfuFqlT2ty01', 'reglk_ctrl_o': {None: None}, 'rst_9': 'X6QGUJo74EftGeOo', 'reglk_ctrl': 'pgXC5hnUe8aUUq5i', 'reglk_mem': 0, 'address': '7VfUF2X4AzsKDNc9', 'en': 'UeEKWCy2faWRJpSA && FHPUHkGltRujxy0P', 'en_acct': 'UeEKWCy2faWRJpSA', 'we': '68dj6zXfc5Gg7zCB', 'wdata': 'EML0Yq6y7yBLbqKl', 'rdata': 0, 'j': 'KZ6Vq4VGEoNAUquZ', 'clk_i': 0}}
 path 0 cycle 0 final path condition:
 []
 Assertion violation
 []
 {}
-Elapsed time 0.02260299999999993
+Elapsed time 0.022042000000000006

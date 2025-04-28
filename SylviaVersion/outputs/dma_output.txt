@@ -1,3 +1,3 @@
-Executing for 1 clock cycles
+Executing for 5 clock cycles
 ** path 0 clock cycle 0 **
-Elapsed time 0.038659
+Elapsed time 0.04104399999999997

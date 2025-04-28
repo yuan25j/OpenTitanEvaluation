@@ -62,6 +62,17 @@ module rsa_wrapper (
 	// );
 	assign en = en_acct && acct_ctrl_i;
 	assign exe_finish_o = (rst_13 ? 1'b1 : exe_finish);
+	always @(*) begin
+		// `assert(1==2)
+		//Translate this SVA: assert -name HACK@DAC21_p95 {(~(rsa_wrapper_i.rst_ni && ~rsa_wrapper_i.rst_13) |-> (rsa_wrapper_i.msg_out == 0))}
+		//Direct translation:
+		// if(!rst_ni && !rst_13) begin
+		// 	`assert(msg_out==0)
+		// end
+		//Compressed translation
+		`assert(!(!rst_ni && !rst_13)||(msg_out==0))
+		//^Ignored.
+	end
 	always @(posedge clk_i)
 		if (~(rst_ni && ~rst_13)) begin
 			inter_rst_ni <= 0;
@@ -290,7 +301,7 @@ module rsa_wrapper (
 	// 	.msg_out(msg_out[(USER_PRIME_WIDTH * 2) - 1:0]),
 	// 	.mod_exp_finish_o(exe_finish)
 	// );
-	always @(*) begin
-		`assert(1==2)
-	end
+	// always @(*) begin
+	// 	`assert(1==2)
+	// end
 endmodule

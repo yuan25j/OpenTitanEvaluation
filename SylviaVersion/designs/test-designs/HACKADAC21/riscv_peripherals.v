@@ -667,7 +667,14 @@ module riscv_peripherals (
 	assign rword_d = (plic_req[0] && !plic_req[37] ? plic_resp[33-:32] : rword_q);
 	// assign plic_master.r_data = {plic_resp[33-:32], rword_q};
 	always @(*) begin
-		`assert(1==2)
+		// `assert(1==2)
+		//Translate the following SVA: assert -name HACK@DAC21_p96_modified {(riscv_peripherals_i.ariane_boot_sel_i |-> riscv_peripherals_i.rom_rdata_linux)}
+		//Direct translation:
+		// if(ariane_boot_sel_i) begin
+		// 	`assert(rom_rdata_linux)
+		// end
+		//Compressed translation
+		`assert(!(ariane_boot_sel_i)||(rom_rdata_linux))
 	end
 	always @(posedge clk_i or negedge rst_ni) begin : p_plic_regs
 		// `assert(1==2)

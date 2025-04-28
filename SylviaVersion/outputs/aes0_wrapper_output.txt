@@ -1,25 +1,2 @@
 Executing for 5 clock cycles
-** path 0 clock cycle 0 **
-** path 0 clock cycle 1 **
-** path 0 clock cycle 2 **
-** path 0 clock cycle 3 **
-** path 0 clock cycle 4 **
-==END OF RUN==
-path 0 cycle 0 initial state:
-{'aes0_wrapper': {'rst_ni': 0, 'reglk_ctrl_i': '32MpVU6o6l6JHHeb', 'acct_ctrl_i': 'w8BKMmFymEwjSlHi', 'debug_mode_i': 'Gh8rWLNc2JM1q6ZO', 'axi_req_i': '79SXLrChIzqwq4I4', 'axi_resp_o': 'wnEkVQGUcWZsG53V', 'rst_1': '4e4V3Fw1iYYNF10v', 'start': 0, 'p_c[0]': 0, 'p_c[1]': 0, 'p_c[2]': 0, 'p_c[3]': 0, 'state[0]': 0, 'state[1]': 0, 'state[2]': 0, 'state[3]': 0, 'key0[0]': 'rs4qHxIcGsTH9rMG', 'key0[1]': 'lchPLIiz63dog97e', 'key0[2]': 'hvav2fVMgtJLvZmA', 'key0[3]': 'DnY4talcSaUHJ6cA', 'key0[4]': 'tEYegVgiZa8OCi9F', 'key0[5]': 'bfIFHu5PEFpK58nW', 'key1[0]': 'z5Hh6RWx2QbCfFdy', 'key1[1]': 'C5A0Bv2yKq4bBPy4', 'key1[2]': 'UOIF9kMAEGpB0j4z', 'key1[3]': 'xSut6vXRoPx1dik7', 'key1[4]': 'u6qhgRwSUIbKTM0H', 'key1[5]': 'ZomhzVXgjP3kMOmu', 'key2[0]': 'efjDtnWgM58sMzlQ', 'key2[1]': 'HRyNDmhTH98oGo4w', 'key2[2]': 'WyDGAd6OrdUtbAwb', 'key2[3]': 'FolUjittC9FKksrQ', 'key2[4]': 'bh7lDoxN9Oy1lRCf', 'key2[5]': 'D2eSUOIoovmagkBK', 'key_sel[0]': 'pYWhRe9pduwTV82O', 'key_sel[1]': 'aBlvTzseKwif2so3', 'p_c_big': 0, 'state_big': 0, 'key_big': 'zVAurXUvPjNoS8E3', 'key_big0': '0ZezsD1VracRb286', 'key_big1': 'WntvvHbZtiiN5hXw', 'key_big2': 'raBidtubyQdaK1UC', 'ct': 'y7U3Y5Ikk8wNXxUM', 'ct_valid': '9v15Uuv3Uoaok2xx', 'address': 'sMpSUO28MeQf8tPQ', 'en': 'IbAKLw3Jj3O2Lk8U', 'en_acct': 'ayyOjlkzv3z1pGcf', 'we': 'LDk9TZgR6gd2bb7r', 'wdata': 'iwBhNvjyOyKndkfo', 'rdata': '3n4r8D2VNHZqh4Cs', 'clk_i': 0}}
-path 0 cycle 0 final state:
-{'aes0_wrapper': {'rst_ni': 'Hp1MnQN7tIzHQB4N', 'reglk_ctrl_i': 'G9Y3lf66NUsqLG3x', 'acct_ctrl_i': 'bg57FmPU5AoTMYhy', 'debug_mode_i': 'gdunfmUJoa90BLZJ', 'axi_req_i': 'tziu2dv86s6oFUmo', 'axi_resp_o': 'ntjFiIRSj0wM8wbR', 'rst_1': 'b07a1PJC5NTS1gxt', 'start': 'kilrJcVmUX9k3JUe', 'p_c[0]': '3xjGeMiZ7odeqVzU', 'p_c[1]': '3xjGeMiZ7odeqVzU', 'p_c[2]': '3xjGeMiZ7odeqVzU', 'p_c[3]': '3xjGeMiZ7odeqVzU', 'state[0]': 0, 'state[1]': 0, 'state[2]': 0, 'state[3]': 0, 'key0[0]': 'rs4qHxIcGsTH9rMG', 'key0[1]': 'lchPLIiz63dog97e', 'key0[2]': 'hvav2fVMgtJLvZmA', 'key0[3]': 'DnY4talcSaUHJ6cA', 'key0[4]': 'tEYegVgiZa8OCi9F', 'key0[5]': 'bfIFHu5PEFpK58nW', 'key1[0]': 'z5Hh6RWx2QbCfFdy', 'key1[1]': 'C5A0Bv2yKq4bBPy4', 'key1[2]': 'UOIF9kMAEGpB0j4z', 'key1[3]': 'xSut6vXRoPx1dik7', 'key1[4]': 'u6qhgRwSUIbKTM0H', 'key1[5]': 'ZomhzVXgjP3kMOmu', 'key2[0]': 'efjDtnWgM58sMzlQ', 'key2[1]': 'HRyNDmhTH98oGo4w', 'key2[2]': 'WyDGAd6OrdUtbAwb', 'key2[3]': 'FolUjittC9FKksrQ', 'key2[4]': 'bh7lDoxN9Oy1lRCf', 'key2[5]': 'D2eSUOIoovmagkBK', 'key_sel[0]': 'pYWhRe9pduwTV82O', 'key_sel[1]': 'aBlvTzseKwif2so3', 'p_c_big': {None: None}, 'state_big': {None: None}, 'key_big': 'If(aBlvTzseKwif2so3, {None: None}, If(pYWhRe9pduwTV82O, If(gdunfmUJoa90BLZJ, 0, If(C5A0Bv2yKq4bBPy4, UOIF9kMAEGpB0j4z, xSut6vXRoPx1dik7) ), If(gdunfmUJoa90BLZJ, 0, If(lchPLIiz63dog97e, hvav2fVMgtJLvZmA, DnY4talcSaUHJ6cA) )))', 'key_big0': 'If(gdunfmUJoa90BLZJ, 0, If(lchPLIiz63dog97e, hvav2fVMgtJLvZmA, DnY4talcSaUHJ6cA) )', 'key_big1': 'If(gdunfmUJoa90BLZJ, 0, If(C5A0Bv2yKq4bBPy4, UOIF9kMAEGpB0j4z, xSut6vXRoPx1dik7) )', 'key_big2': {None: None}, 'ct': '2Kq02myC6ko6pmD7', 'ct_valid': 'lonuYdY1McEF3iIh', 'address': 'dUls0HGBlDshxwne', 'en': '5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy', 'en_acct': '5iYLaeNXrUBHUn5t', 'we': 'iSuWr49c4S0cscfS', 'wdata': '4dyiMWDK17cZEzgk', 'rdata': "64'b0000000000000000000000000000000000000000000000000000000000000000", 'clk_i': 'eTIUqrmTCk56e9iu', 'AXI_ADDR_WIDTH': 64, 'AXI_DATA_WIDTH': 64, 'AXI_ID_WIDTH': 10, 'ariane_axi_AddrWidth': 64, 'ariane_soc_IdWidth': 4, 'ariane_axi_DataWidth': 64, 'ariane_axi_StrbWidth': 8, 'p_c': '3xjGeMiZ7odeqVzU', 'state': 'PVdAUmCsR0H5X2R9', 'key0': 'CDhYxaK0E68tPhI4', 'key1': 'dIYvrqIo6E1QR99X', 'key2': 'nXUHcByIXoh7Pxve', 'key_sel': 'SuzQSfhwRPm2RPPx'}}
-path 0 cycle 0 final path condition:
-[5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy != int_to_bv(1),
- 5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy != int_to_bv(1),
- 5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy != int_to_bv(1),
- 5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy != int_to_bv(1),
- 5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy != int_to_bv(1)]
-Assertion violation
-[5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy != int_to_bv(1),
- 5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy != int_to_bv(1),
- 5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy != int_to_bv(1),
- 5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy != int_to_bv(1),
- 5iYLaeNXrUBHUn5t && bg57FmPU5AoTMYhy != int_to_bv(1)]
-{'en': 0}
-Elapsed time 0.03702800000000006
+Elapsed time 0.030359000000000025
