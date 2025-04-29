@@ -16,3 +16,4 @@ A fully automated pipeline for hardware‐level security verification of the Ope
 - Executes Sylvia’s symbolic engine with hardcoded reset states  
 - Logs and compares assertion violations against the known property suite
 
+The outputs of the files from each step are located in their repsective folders.
