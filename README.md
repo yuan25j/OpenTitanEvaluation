@@ -3,8 +3,7 @@
 This paper presents the results of running symbolic
 execution on an open-source hardware design, OpenPiton, and
 reports its findings. Its hallmark is making use of a modern
-symbolic execution tool, Sylvia, which uses piecewise composition
-- allowing it to avoid exploring every path and allowing it to
+symbolic execution tool, Sylvia, which uses piecewise composition allowing it to avoid exploring every path and allowing it to
 reuse the exploration of independent modules or always-blocks in
 the hardware design, improving overall efficiency. The benefit is
 that this allows us to verify security of hardware design without
