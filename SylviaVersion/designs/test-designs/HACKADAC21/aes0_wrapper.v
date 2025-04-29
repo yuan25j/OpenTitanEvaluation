@@ -88,7 +88,6 @@ module aes0_wrapper (
 		// end
 		//compressed translation:
 		// `assert(!(debug_mode_i) || (key_big==192'b0 && key_big2==192'b0))
-		//^^^ NOT DETECTED!!!
 
 		
 	end

@@ -84,7 +84,6 @@ module dma (
 		
 	end
 	always @(posedge clk_i or negedge rst_ni) begin : save_inputs
-		// `assert(1==2)
 		if (!rst_ni) begin
 			start_d <= 'b0;
 			length_d <= 'b0;
